@@ -1,0 +1,4 @@
+name: BungeeMotd
+main: com.rylinaux.bungeemotd.BungeeMotd
+version: 1.0.0
+author: rylinaux

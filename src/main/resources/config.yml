@@ -1,0 +1,6 @@
+main: '&3Server &8>> &aVersion'
+
+dynamic:
+ - '&aTesting 1'
+ - '&bTesting 2'
+ - '&cTesting 3'
