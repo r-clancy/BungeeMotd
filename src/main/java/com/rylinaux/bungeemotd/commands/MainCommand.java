@@ -39,7 +39,7 @@ public class MainCommand {
         plugin.getConfig().getConfig().set("main", motd);
         plugin.getConfig().save();
 
-        sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + "The main MOTD has been set to '" + ChatColor.translateAlternateColorCodes('&', motd) + ChatColor.GRAY + "'."));
+        sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + "The main MOTD has been set to '" + StringUtil.colorMessage(motd) + ChatColor.GRAY + "'."));
 
     }
 }

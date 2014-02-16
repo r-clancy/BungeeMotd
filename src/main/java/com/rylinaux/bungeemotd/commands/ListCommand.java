@@ -1,6 +1,7 @@
 package com.rylinaux.bungeemotd.commands;
 
 import com.rylinaux.bungeemotd.BungeeMotd;
+import com.rylinaux.bungeemotd.utilities.StringUtil;
 
 import java.util.List;
 
@@ -31,8 +32,7 @@ public class ListCommand {
         List<String> dynamic = plugin.getDynamic();
         sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + ChatColor.translateAlternateColorCodes('&', plugin.getMain())));
         for (String msg : dynamic) {
-            sender.sendMessage(new TextComponent(ChatColor.DARK_AQUA + String.valueOf(dynamic.indexOf(msg)) + ") "
-                    + ChatColor.RESET + ChatColor.translateAlternateColorCodes('&', msg)));
+            sender.sendMessage(new TextComponent(ChatColor.DARK_AQUA + String.valueOf(dynamic.indexOf(msg)) + ") " + ChatColor.RESET + StringUtil.colorMessage(msg)));
         }
     }
 
