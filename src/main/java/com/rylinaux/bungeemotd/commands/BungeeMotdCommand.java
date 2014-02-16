@@ -4,7 +4,7 @@ import com.rylinaux.bungeemotd.BungeeMotd;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
-import net.md_5.bungee.api.chat.ComponentBuilder;
+import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.plugin.Command;
 
 public class BungeeMotdCommand extends Command {
@@ -20,7 +20,7 @@ public class BungeeMotdCommand extends Command {
     public void execute(CommandSender sender, String[] args) {
 
         if (!sender.hasPermission(this.getPermission())) {
-            sender.sendMessage(new ComponentBuilder("You don't have permission to do this.").color(ChatColor.RED).create());
+            sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + ChatColor.RED + "You don't have permission to do this."));
             return;
         }
 
