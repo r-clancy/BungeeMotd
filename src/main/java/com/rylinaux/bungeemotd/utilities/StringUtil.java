@@ -17,4 +17,8 @@ public class StringUtil {
         return ret;
     }
 
+    public static String formatMotd(String main, String dynamic) {
+        return StringUtil.colorMessage(main + "\n" + ChatColor.RESET + dynamic);
+    }
+
 }

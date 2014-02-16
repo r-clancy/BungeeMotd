@@ -5,7 +5,6 @@ import com.rylinaux.bungeemotd.utilities.StringUtil;
 
 import java.util.Random;
 
-import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ServerPing;
 import net.md_5.bungee.api.event.ProxyPingEvent;
 import net.md_5.bungee.api.plugin.Listener;
@@ -26,7 +25,7 @@ public class PingListener implements Listener {
 
         int index = random.nextInt(plugin.getDynamic().size());
 
-        String motd = StringUtil.colorMessage(plugin.getMain() + "\n" + ChatColor.RESET + plugin.getDynamic().get(index));
+        String motd = StringUtil.formatMotd(plugin.getMain(), plugin.getDynamic().get(index));
 
         ServerPing response = event.getResponse();
         ServerPing updated = new ServerPing(response.getVersion(), response.getPlayers(), motd, response.getFavicon());
