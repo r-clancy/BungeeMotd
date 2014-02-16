@@ -1,7 +1,7 @@
 package com.rylinaux.bungeemotd.commands;
 
 import com.rylinaux.bungeemotd.BungeeMotd;
-import com.rylinaux.bungeemotd.utilities.StringUtils;
+import com.rylinaux.bungeemotd.utilities.StringUtil;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
@@ -33,7 +33,7 @@ public class MainCommand {
             return;
         }
 
-        String motd = StringUtils.consolidateStrings(args, 1);
+        String motd = StringUtil.consolidateStrings(args, 1);
 
         plugin.setMain(motd);
         plugin.getConfig().getConfig().set("main", motd);

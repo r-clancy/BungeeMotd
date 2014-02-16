@@ -1,7 +1,7 @@
 package com.rylinaux.bungeemotd.commands;
 
 import com.rylinaux.bungeemotd.BungeeMotd;
-import com.rylinaux.bungeemotd.utilities.StringUtils;
+import com.rylinaux.bungeemotd.utilities.StringUtil;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
@@ -45,7 +45,7 @@ public class DelCommand {
         plugin.getConfig().getConfig().set("dynamic", plugin.getDynamic());
         plugin.getConfig().save();
 
-        sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + "MOTD '" + StringUtils.colorMessage(message) + ChatColor.GRAY + "' has been deleted."));
+        sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + "MOTD '" + StringUtil.colorMessage(message) + ChatColor.GRAY + "' has been deleted."));
 
     }
 

@@ -1,7 +1,7 @@
 package com.rylinaux.bungeemotd.commands;
 
 import com.rylinaux.bungeemotd.BungeeMotd;
-import com.rylinaux.bungeemotd.utilities.StringUtils;
+import com.rylinaux.bungeemotd.utilities.StringUtil;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;
@@ -33,13 +33,13 @@ public class AddCommand {
             return;
         }
 
-        String motd = StringUtils.consolidateStrings(args, 1);
+        String motd = StringUtil.consolidateStrings(args, 1);
 
         plugin.getDynamic().add(motd);
         plugin.getConfig().getConfig().set("dynamic", plugin.getDynamic());
         plugin.getConfig().save();
 
-        sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + "MOTD '" + StringUtils.colorMessage(motd) + ChatColor.GRAY + "' has been added."));
+        sender.sendMessage(new TextComponent(BungeeMotd.PREFIX + "MOTD '" + StringUtil.colorMessage(motd) + ChatColor.GRAY + "' has been added."));
 
     }
 

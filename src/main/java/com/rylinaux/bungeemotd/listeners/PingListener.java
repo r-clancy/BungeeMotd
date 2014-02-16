@@ -1,7 +1,7 @@
 package com.rylinaux.bungeemotd.listeners;
 
 import com.rylinaux.bungeemotd.BungeeMotd;
-import com.rylinaux.bungeemotd.utilities.StringUtils;
+import com.rylinaux.bungeemotd.utilities.StringUtil;
 
 import java.util.Random;
 
@@ -24,7 +24,7 @@ public class PingListener implements Listener {
 
         int index = new Random().nextInt(plugin.getDynamic().size());
 
-        String motd = StringUtils.colorMessage(plugin.getMain() + "\n" + ChatColor.RESET + plugin.getDynamic().get(index));
+        String motd = StringUtil.colorMessage(plugin.getMain() + "\n" + ChatColor.RESET + plugin.getDynamic().get(index));
 
         ServerPing response = event.getResponse();
         ServerPing updated = new ServerPing(response.getVersion(), response.getPlayers(), motd, response.getFavicon());

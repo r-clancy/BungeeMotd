@@ -43,7 +43,7 @@ public class BungeeConfig {
     private Configuration config;
 
     /**
-     * Contruct our object (using the default config name).
+     * Construct our object (using the default config name).
      *
      * @param plugin the plugin instance
      */
@@ -52,7 +52,7 @@ public class BungeeConfig {
     }
 
     /**
-     * Contruct our object (using a custom config name).
+     * Construct our object (using a custom config name).
      *
      * @param plugin the plugin instance
      * @param name   the name of the config file
@@ -62,7 +62,7 @@ public class BungeeConfig {
     }
 
     /**
-     * Contruct our object (using a custom file, use for sub-folders).
+     * Construct our object (using a custom file, use for sub-folders).
      *
      * @param plugin the plugin instance
      * @param file   the config file

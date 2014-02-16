@@ -2,7 +2,7 @@ package com.rylinaux.bungeemotd.utilities;
 
 import net.md_5.bungee.api.ChatColor;
 
-public class StringUtils {
+public class StringUtil {
 
     public static String colorMessage(String message) {
         return ChatColor.translateAlternateColorCodes('&', message);
