@@ -24,22 +24,21 @@ public class BungeeMotd extends Plugin {
 
     @Override
     public void onEnable() {
-
-        config = new BungeeConfig(this);
-
-        main = config.getConfig().getString("main");
-        dynamic = config.getConfig().getStringList("dynamic");
-
+        initConfig();
         this.getProxy().getPluginManager().registerListener(this, new PingListener(this));
-
         this.getProxy().getPluginManager().registerCommand(this, new BungeeMotdCommand(this, "bungeemotd", "bungeemotd.command", "bmotd"));
-
     }
 
     @Override
     public void onDisable() {
         this.getProxy().getPluginManager().unregisterCommands(this);
         this.getProxy().getPluginManager().unregisterListeners(this);
+    }
+
+    private void initConfig() {
+        config = new BungeeConfig(this);
+        main = config.getConfig().getString("main");
+        dynamic = config.getConfig().getStringList("dynamic");
     }
 
 }
