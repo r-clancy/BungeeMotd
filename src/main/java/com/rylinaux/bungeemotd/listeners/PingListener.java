@@ -15,6 +15,8 @@ public class PingListener implements Listener {
 
     private final BungeeMotd plugin;
 
+    private final Random random = new Random();
+
     public PingListener(BungeeMotd plugin) {
         this.plugin = plugin;
     }
@@ -22,7 +24,7 @@ public class PingListener implements Listener {
     @EventHandler
     public void onPing(ProxyPingEvent event) {
 
-        int index = new Random().nextInt(plugin.getDynamic().size());
+        int index = random.nextInt(plugin.getDynamic().size());
 
         String motd = StringUtil.colorMessage(plugin.getMain() + "\n" + ChatColor.RESET + plugin.getDynamic().get(index));
 
